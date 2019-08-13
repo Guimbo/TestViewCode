@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SnapKit
+
 
 protocol CodeView: UIView{
     func buildViewsInHierarchy()
