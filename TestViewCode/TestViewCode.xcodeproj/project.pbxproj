@@ -12,6 +12,7 @@
 		EDE49DA623008DA3006A6EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE49DA523008DA3006A6EE7 /* Assets.xcassets */; };
 		EDE49DA923008DA3006A6EE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE49DA723008DA3006A6EE7 /* LaunchScreen.storyboard */; };
 		EDE49DB12300998F006A6EE7 /* ViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE49DB02300998F006A6EE7 /* ViewControllerScreen.swift */; };
+		EDE49DB3230331A5006A6EE7 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE49DB2230331A5006A6EE7 /* CodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EDE49DA823008DA3006A6EE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDE49DAA23008DA3006A6EE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDE49DB02300998F006A6EE7 /* ViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreen.swift; sourceTree = "<group>"; };
+		EDE49DB2230331A5006A6EE7 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				EDE49D9E23008DA2006A6EE7 /* AppDelegate.swift */,
 				EDE49DA023008DA2006A6EE7 /* ViewController.swift */,
 				EDE49DB02300998F006A6EE7 /* ViewControllerScreen.swift */,
+				EDE49DB2230331A5006A6EE7 /* CodeView.swift */,
 				EDE49DA523008DA3006A6EE7 /* Assets.xcassets */,
 				EDE49DA723008DA3006A6EE7 /* LaunchScreen.storyboard */,
 				EDE49DAA23008DA3006A6EE7 /* Info.plist */,
@@ -137,6 +140,7 @@
 				EDE49DA123008DA2006A6EE7 /* ViewController.swift in Sources */,
 				EDE49DB12300998F006A6EE7 /* ViewControllerScreen.swift in Sources */,
 				EDE49D9F23008DA2006A6EE7 /* AppDelegate.swift in Sources */,
+				EDE49DB3230331A5006A6EE7 /* CodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
