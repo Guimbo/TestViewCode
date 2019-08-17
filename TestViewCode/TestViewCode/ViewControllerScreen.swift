@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 final class ViewControllerScreen: UIView{
     
     lazy var button:UIButton = {
@@ -16,6 +15,8 @@ final class ViewControllerScreen: UIView{
         view.setTitle("Smash", for: .normal)
         return view
     }()
+    
+    let gridBox = GridBoxView()
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -30,6 +31,7 @@ final class ViewControllerScreen: UIView{
 extension ViewControllerScreen: CodeView{
     func buildViewsInHierarchy() {
         addSubview(button)
+        addSubview(gridBox)
     }
     
     func setContrains() {
@@ -38,6 +40,11 @@ extension ViewControllerScreen: CodeView{
             make.right.equalToSuperview().inset(15)
             make.bottom.equalTo(self).inset(15) // in this case
             make.height.equalTo(50)
+        }
+        
+        gridBox.snp.makeConstraints{ make in
+            make.height.width.equalTo(200)
+            make.center.equalToSuperview()
         }
         
         
