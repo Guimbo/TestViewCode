@@ -15,7 +15,6 @@ protocol CodeView: UIView{
     func setContrains()
     func setExtraConfigs()
     func setupView()
-    func makeAnything()
 }
 
 extension CodeView{
@@ -23,11 +22,6 @@ extension CodeView{
         buildViewsInHierarchy()
         setContrains()
         setExtraConfigs()
-    }
-    
-    
-    func makeAnything() {
-        print("Make Anything")
     }
     
 }

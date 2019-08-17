@@ -10,5 +10,10 @@ target 'TestViewCode' do
   pod 'SnapKit', '~> 5.0.0'
 
   # Pods for TestViewCode
+end
 
+target 'TestViewCodeTests' do
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'Nimble-Snapshots'
 end
