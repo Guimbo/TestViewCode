@@ -16,7 +16,16 @@ final class ViewControllerScreen: UIView{
         return view
     }()
     
-    let gridBox = GridBoxView()
+    private lazy var gridStackView: UIStackView = {
+        let view = UIStackView(frame: .zero)
+        view.axis = .horizontal
+        view.distribution = .fillEqually
+        view.spacing = 8.0
+        return view
+    }()
+    
+    let leftGrid = GridBoxView()
+    let rightGrid = GridBoxView()
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -31,7 +40,9 @@ final class ViewControllerScreen: UIView{
 extension ViewControllerScreen: CodeView{
     func buildViewsInHierarchy() {
         addSubview(button)
-        addSubview(gridBox)
+        gridStackView.addArrangedSubview(leftGrid)
+        gridStackView.addArrangedSubview(rightGrid)
+        addSubview(gridStackView)
     }
     
     func setContrains() {
@@ -42,9 +53,11 @@ extension ViewControllerScreen: CodeView{
             make.height.equalTo(50)
         }
         
-        gridBox.snp.makeConstraints{ make in
-            make.height.width.equalTo(200)
-            make.center.equalToSuperview()
+        gridStackView.snp.makeConstraints{ make in
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().inset(20)
+            make.height.equalTo(320)
+            make.centerY.equalToSuperview()
         }
         
         

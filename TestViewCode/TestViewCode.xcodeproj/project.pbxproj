@@ -11,6 +11,7 @@
 		74DF57B70942291709EFD9D4 /* Pods_TestViewCodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F49F903591D2B1197B6DC7B /* Pods_TestViewCodeTests.framework */; };
 		ED1CCEF32308959D00D34244 /* TestViewCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CCEF22308959D00D34244 /* TestViewCodeTests.swift */; };
 		ED1CCEFB2308960100D34244 /* GridBoxViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CCEFA2308960100D34244 /* GridBoxViewSpec.swift */; };
+		ED1CCEFD2308A63F00D34244 /* ViewControllerScreenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CCEFC2308A63F00D34244 /* ViewControllerScreenSpec.swift */; };
 		EDE49D9F23008DA2006A6EE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE49D9E23008DA2006A6EE7 /* AppDelegate.swift */; };
 		EDE49DA123008DA2006A6EE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE49DA023008DA2006A6EE7 /* ViewController.swift */; };
 		EDE49DA623008DA3006A6EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE49DA523008DA3006A6EE7 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		ED1CCEF22308959D00D34244 /* TestViewCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewCodeTests.swift; sourceTree = "<group>"; };
 		ED1CCEF42308959D00D34244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CCEFA2308960100D34244 /* GridBoxViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxViewSpec.swift; sourceTree = "<group>"; };
+		ED1CCEFC2308A63F00D34244 /* ViewControllerScreenSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreenSpec.swift; sourceTree = "<group>"; };
 		EDE49D9B23008DA2006A6EE7 /* TestViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE49D9E23008DA2006A6EE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDE49DA023008DA2006A6EE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				ED1CCEF22308959D00D34244 /* TestViewCodeTests.swift */,
 				ED1CCEF42308959D00D34244 /* Info.plist */,
 				ED1CCEFA2308960100D34244 /* GridBoxViewSpec.swift */,
+				ED1CCEFC2308A63F00D34244 /* ViewControllerScreenSpec.swift */,
 			);
 			path = TestViewCodeTests;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1CCEF32308959D00D34244 /* TestViewCodeTests.swift in Sources */,
+				ED1CCEFD2308A63F00D34244 /* ViewControllerScreenSpec.swift in Sources */,
 				ED1CCEFB2308960100D34244 /* GridBoxViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
