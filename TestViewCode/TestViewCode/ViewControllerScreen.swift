@@ -56,7 +56,7 @@ extension ViewControllerScreen: CodeView{
         gridStackView.snp.makeConstraints{ make in
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().inset(20)
-            make.height.equalTo(320)
+            make.height.equalTo(220)
             make.centerY.equalToSuperview()
         }
         

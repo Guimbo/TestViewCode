@@ -19,6 +19,7 @@
 		EDE49DB12300998F006A6EE7 /* ViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE49DB02300998F006A6EE7 /* ViewControllerScreen.swift */; };
 		EDE49DB3230331A5006A6EE7 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE49DB2230331A5006A6EE7 /* CodeView.swift */; };
 		EDE49DBB23043678006A6EE7 /* GridBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE49DBA23043678006A6EE7 /* GridBoxView.swift */; };
+		EDE953372309CD890068B69F /* ProfileGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE953362309CD890068B69F /* ProfileGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		EDE49DB02300998F006A6EE7 /* ViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreen.swift; sourceTree = "<group>"; };
 		EDE49DB2230331A5006A6EE7 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		EDE49DBA23043678006A6EE7 /* GridBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxView.swift; sourceTree = "<group>"; };
+		EDE953362309CD890068B69F /* ProfileGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				EDE49DA723008DA3006A6EE7 /* LaunchScreen.storyboard */,
 				EDE49DAA23008DA3006A6EE7 /* Info.plist */,
 				EDE49DBA23043678006A6EE7 /* GridBoxView.swift */,
+				EDE953362309CD890068B69F /* ProfileGrid.swift */,
 			);
 			path = TestViewCode;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE49DBB23043678006A6EE7 /* GridBoxView.swift in Sources */,
+				EDE953372309CD890068B69F /* ProfileGrid.swift in Sources */,
 				EDE49DA123008DA2006A6EE7 /* ViewController.swift in Sources */,
 				EDE49DB12300998F006A6EE7 /* ViewControllerScreen.swift in Sources */,
 				EDE49D9F23008DA2006A6EE7 /* AppDelegate.swift in Sources */,
