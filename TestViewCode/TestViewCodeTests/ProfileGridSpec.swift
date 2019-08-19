@@ -17,7 +17,7 @@ class ProfileGridSpec: QuickSpec {
             it("If this is my ui, will be like i want, oras"){
                 let frame = CGRect(x: 0, y: 0, width: 250, height: 70)
                 let view  = ProfileGrid(frame: frame)
-                expect(view) == recordSnapshot("ProfileGrid")
+                expect(view) == snapshot("ProfileGrid")
             }
             
         }
