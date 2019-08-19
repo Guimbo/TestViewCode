@@ -31,7 +31,7 @@ final class ProfileGrid : UIView{
         return power
     }()
     
-    let TitleGroup: UIStackView = {
+    let titleGroup: UIStackView = {
         let stackTitle = UIStackView(frame: .zero)
         stackTitle.axis = .vertical
         stackTitle.distribution = .fillEqually
@@ -39,13 +39,6 @@ final class ProfileGrid : UIView{
         return stackTitle
     }()
     
-    let ProfileGroup: UIStackView = {
-        let stackProfile = UIStackView(frame: .zero)
-        stackProfile.axis = .horizontal
-        stackProfile.distribution = .fillEqually
-        stackProfile.spacing = 4.0
-        return stackProfile
-    }()
     
     // Train Here Extension
     
@@ -63,15 +56,27 @@ final class ProfileGrid : UIView{
 extension ProfileGrid: CodeView{
     
     func buildViewsInHierarchy() {
-        TitleGroup.addArrangedSubview(lblName)
-        TitleGroup.addArrangedSubview(lblSubTitle)
-        ProfileGroup.addArrangedSubview(imageProfile)
-        ProfileGroup.addArrangedSubview(TitleGroup)
-        addSubview(ProfileGroup)
+        titleGroup.addArrangedSubview(lblName)
+        titleGroup.addArrangedSubview(lblSubTitle)
+        addSubview(imageProfile)
+        addSubview(titleGroup)
         
     }
     
     func setContrains() {
+        imageProfile.snp.makeConstraints{make in
+            make.left.top.bottom.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.35)
+            make.height.equalToSuperview()
+            make.right.equalToSuperview().offset(10)
+        }
+        
+        titleGroup.snp.makeConstraints{ make in
+            make.right.top.bottom.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.57)
+            make.height.equalToSuperview()
+            
+        }
         
     }
     
