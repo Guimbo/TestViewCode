@@ -135,13 +135,13 @@
 			children = (
 				EDE49D9E23008DA2006A6EE7 /* AppDelegate.swift */,
 				EDE49DA023008DA2006A6EE7 /* ViewController.swift */,
-				EDE49DB02300998F006A6EE7 /* ViewControllerScreen.swift */,
 				EDE49DB2230331A5006A6EE7 /* CodeView.swift */,
+				EDE49DBA23043678006A6EE7 /* GridBoxView.swift */,
+				EDE953362309CD890068B69F /* ProfileGrid.swift */,
+				EDE49DB02300998F006A6EE7 /* ViewControllerScreen.swift */,
 				EDE49DA523008DA3006A6EE7 /* Assets.xcassets */,
 				EDE49DA723008DA3006A6EE7 /* LaunchScreen.storyboard */,
 				EDE49DAA23008DA3006A6EE7 /* Info.plist */,
-				EDE49DBA23043678006A6EE7 /* GridBoxView.swift */,
-				EDE953362309CD890068B69F /* ProfileGrid.swift */,
 			);
 			path = TestViewCode;
 			sourceTree = "<group>";

@@ -8,21 +8,21 @@
 
 import UIKit
 
-//extension UIView {
-//    func addSubviews(_ views: [UIView]) {
-//        views.forEach { (view) in
-//            self.addSubview(view)
-//        }
-//    }
-//}
-//
-//extension UIStackView {
-//    func addArrangedSubviews(_ views: [UIView]) {
-//        views.forEach { (view) in
-//            self.addArrangedSubview(view)
-//        }
-//    }
-//}
+extension UIView {
+    func addSubviews(_ views: [UIView]) {
+        views.forEach { (view) in
+            self.addSubview(view)
+        }
+    }
+}
+
+extension UIStackView {
+    func addArrangedSubviews(_ views: [UIView]) {
+        views.forEach { (view) in
+            self.addArrangedSubview(view)
+        }
+    }
+}
 
 final class ViewControllerScreen: UIView{
     
