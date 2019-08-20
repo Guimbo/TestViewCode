@@ -23,20 +23,8 @@ final class GridBoxView : UIView{
         return view
     }()
     
-    lazy var title: UILabel = {
-        let view = UILabel(frame: .zero)
-        view.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
-        return view
-    }()
-    
-   
-    
-    lazy var subtitle: UILabel = {
-        let view = UILabel(frame: .zero)
-        view.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        return view
-    }()
-    
+    lazy var title = UILabel(backgroundColor: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), text: "", textColor: .black)
+    lazy var subtitle = UILabel(backgroundColor: #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), text: "", textColor: .black)
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)

@@ -17,37 +17,11 @@ final class ProfileGrid : UIView{
         return view
     }()
     
-    lazy var lblName: UILabel = {
-        let name = UILabel(frame: .zero)
-        name.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
-        name.text = "Shigaraki Tomura"
-        name.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        return name
-    }()
-    
-    lazy var lblSubTitle: UILabel = {
-        let power = UILabel(frame: .zero)
-        power.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        power.text = "Touch Kill"
-        power.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        return power
-    }()
-    
-    lazy var lblAge: UILabel = {
-        let name = UILabel(frame: .zero)
-        name.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        name.text = "17"
-        name.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        return name
-    }()
-    
-    lazy var lblAlignment: UILabel = {
-        let power = UILabel(frame: .zero)
-        power.backgroundColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
-        power.text = "Evil"
-        power.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        return power
-    }()
+
+    lazy var lblName = UILabel(backgroundColor: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1), text: "Shigaraki Tomura", textColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+    lazy var lblSubtitle = UILabel(backgroundColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), text: "Touch Kill", textColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+    lazy var lblAge = UILabel(backgroundColor: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), text: "17", textColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
+    lazy var lblAlignment = UILabel(backgroundColor: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1), text: "Evil", textColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
     
     lazy var littleGroup: UIStackView = {
         let stackTitle = UIStackView(frame: .zero)
@@ -83,7 +57,7 @@ extension ProfileGrid: CodeView{
         
         
         littleGroup.addArrangedSubviews([lblAge, lblAlignment])
-        titleGroup.addArrangedSubviews([lblName, lblSubTitle, littleGroup])
+        titleGroup.addArrangedSubviews([lblName, lblSubtitle, littleGroup])
     
         
         addSubviews([imageProfile,titleGroup])

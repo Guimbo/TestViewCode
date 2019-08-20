@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 extension UIView {
     func addSubviews(_ views: [UIView]){
@@ -24,4 +25,24 @@ extension UIStackView {
     }
 }
 
+extension UILabel {
+    convenience init(backgroundColor: UIColor, text:String, textColor: UIColor){
+        self.init()
+        self.frame = .zero
+        self.backgroundColor = backgroundColor
+        self.text = text
+        self.textColor = textColor
+    }
+    
+}
+
+extension UIStackView {
+    convenience init(axis: NSLayoutConstraint.Axis, distribution: UIStackView.Distribution, spacing: CGFloat){
+        self.init()
+        self.frame = .zero
+        self.axis = axis
+        self.distribution = distribution
+        self.spacing = spacing
+    }
+}
 
