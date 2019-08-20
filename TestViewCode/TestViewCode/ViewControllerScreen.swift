@@ -52,9 +52,8 @@ final class ViewControllerScreen: UIView{
 extension ViewControllerScreen: CodeView{
     func buildViewsInHierarchy() {
         
-        gridStackView.addArrangedSubview(leftGrid)
-        gridStackView.addArrangedSubview(rightGrid)
         
+        gridStackView.addArrangedSubviews([leftGrid,rightGrid])
         addSubviews([button,gridStackView,profileGrid])
     }
     

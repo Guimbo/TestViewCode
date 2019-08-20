@@ -49,7 +49,7 @@ final class ProfileGrid : UIView{
         return power
     }()
     
-    let littleGroup: UIStackView = {
+    lazy var littleGroup: UIStackView = {
         let stackTitle = UIStackView(frame: .zero)
         stackTitle.axis = .horizontal
         stackTitle.distribution = .fillEqually
@@ -57,16 +57,13 @@ final class ProfileGrid : UIView{
         return stackTitle
     }()
     
-    let titleGroup: UIStackView = {
+    lazy var titleGroup: UIStackView = {
         let stackTitle = UIStackView(frame: .zero)
         stackTitle.axis = .vertical
         stackTitle.distribution = .fillEqually
         stackTitle.spacing = 5.0
         return stackTitle
     }()
-    
-    
-    // Train Here Extension
     
     
     override init(frame: CGRect = .zero) {
@@ -82,12 +79,12 @@ final class ProfileGrid : UIView{
 extension ProfileGrid: CodeView{
     
     func buildViewsInHierarchy() {
-        titleGroup.addArrangedSubview(lblName)
-        titleGroup.addArrangedSubview(lblSubTitle)
-        littleGroup.addArrangedSubview(lblAge)
-        littleGroup.addArrangedSubview(lblAlignment)
+
         
-        titleGroup.addArrangedSubview(littleGroup)
+        
+        littleGroup.addArrangedSubviews([lblAge, lblAlignment])
+        titleGroup.addArrangedSubviews([lblName, lblSubTitle, littleGroup])
+    
         
         addSubviews([imageProfile,titleGroup])
         
