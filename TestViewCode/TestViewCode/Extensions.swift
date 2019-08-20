@@ -37,11 +37,11 @@ extension UILabel {
 }
 
 extension UIStackView {
-    convenience init(axis: NSLayoutConstraint.Axis, distribution: UIStackView.Distribution, spacing: CGFloat){
+    convenience init(axis: NSLayoutConstraint.Axis, spacing: CGFloat){
         self.init()
         self.frame = .zero
         self.axis = axis
-        self.distribution = distribution
+        self.distribution = .fillEqually
         self.spacing = spacing
     }
 }

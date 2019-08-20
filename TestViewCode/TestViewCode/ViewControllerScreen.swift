@@ -18,13 +18,8 @@ final class ViewControllerScreen: UIView{
         return view
     }()
     
-    private lazy var gridStackView: UIStackView = {
-        let view = UIStackView(frame: .zero)
-        view.axis = .horizontal
-        view.distribution = .fillEqually
-        view.spacing = 8.0
-        return view
-    }()
+    private lazy var gridStackView: UIStackView = UIStackView(axis: .horizontal, spacing: 8.0)
+    
     
     let leftGrid = GridBoxView()
     let rightGrid = GridBoxView()

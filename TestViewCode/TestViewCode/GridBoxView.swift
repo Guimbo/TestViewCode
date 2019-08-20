@@ -15,17 +15,11 @@ final class GridBoxView : UIView{
         return view
     }()
     
-    lazy var stackView: UIStackView = {
-        let view = UIStackView(frame: .zero)
-        view.axis = .vertical
-        view.distribution = .fillEqually
-        view.spacing = 8.0
-        return view
-    }()
+    lazy var title: UILabel = UILabel(backgroundColor: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), text: "", textColor: .black)
+    lazy var subtitle: UILabel = UILabel(backgroundColor: #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), text: "", textColor: .black)
     
-    lazy var title = UILabel(backgroundColor: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), text: "", textColor: .black)
-    lazy var subtitle = UILabel(backgroundColor: #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), text: "", textColor: .black)
-    
+    lazy var stackGrid: UIStackView = UIStackView(axis: .vertical, spacing: 8.0)
+
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupView()
@@ -39,8 +33,8 @@ final class GridBoxView : UIView{
 extension GridBoxView: CodeView{
     func buildViewsInHierarchy() {
         
-        stackView.addArrangedSubviews([title,subtitle])
-        addSubviews([imageView,stackView])
+        stackGrid.addArrangedSubviews([title,subtitle])
+        addSubviews([imageView,stackGrid])
     }
     
     func setContrains() {
@@ -49,7 +43,7 @@ extension GridBoxView: CodeView{
             make.height.equalToSuperview().multipliedBy(0.7)
         }
         
-        stackView.snp.makeConstraints{ make in
+        stackGrid.snp.makeConstraints{ make in
             make.left.bottom.right.equalToSuperview()
             make.top.equalTo(imageView.snp.bottom).offset(8)
             
