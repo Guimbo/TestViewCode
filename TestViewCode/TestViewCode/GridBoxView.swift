@@ -50,10 +50,10 @@ final class GridBoxView : UIView{
 
 extension GridBoxView: CodeView{
     func buildViewsInHierarchy() {
-        addSubview(imageView)
         stackView.addArrangedSubview(title)
         stackView.addArrangedSubview(subtitle)
-        addSubview(stackView)
+        
+        addSubviews([imageView,stackView])
     }
     
     func setContrains() {

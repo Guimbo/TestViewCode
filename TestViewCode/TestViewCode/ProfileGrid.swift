@@ -89,8 +89,7 @@ extension ProfileGrid: CodeView{
         
         titleGroup.addArrangedSubview(littleGroup)
         
-        addSubview(imageProfile)
-        addSubview(titleGroup)
+        addSubviews([imageProfile,titleGroup])
         
     }
     

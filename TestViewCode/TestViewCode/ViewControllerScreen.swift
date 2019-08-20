@@ -8,21 +8,15 @@
 
 import UIKit
 
-extension UIView {
-    func addSubviews(_ views: [UIView]) {
-        views.forEach { (view) in
-            self.addSubview(view)
-        }
-    }
-}
+//extension UIStackView {
+//    func addArrangedSubviews(_ views: [UIView]) {
+//        views.forEach { (view) in
+//            self.addArrangedSubview(view)
+//        }
+//    }
+//}
 
-extension UIStackView {
-    func addArrangedSubviews(_ views: [UIView]) {
-        views.forEach { (view) in
-            self.addArrangedSubview(view)
-        }
-    }
-}
+
 
 final class ViewControllerScreen: UIView{
     
@@ -57,11 +51,11 @@ final class ViewControllerScreen: UIView{
 
 extension ViewControllerScreen: CodeView{
     func buildViewsInHierarchy() {
-        addSubview(button)
+        
         gridStackView.addArrangedSubview(leftGrid)
         gridStackView.addArrangedSubview(rightGrid)
-        addSubview(gridStackView)
-        addSubview(profileGrid)
+        
+        addSubviews([button,gridStackView,profileGrid])
     }
     
     func setContrains() {
