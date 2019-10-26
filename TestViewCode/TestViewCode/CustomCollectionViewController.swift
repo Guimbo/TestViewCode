@@ -12,7 +12,7 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
     
     let customCellIdentifier = "customCellIdentifier"
     
-
+    var myFavoriteAnimes = ["Naruto", "FullMetal Alchemist", "Saint Seya", "Jojo", "Dororo"]
     
     override func viewDidLoad() {
         collectionView?.backgroundColor = .white
@@ -23,14 +23,15 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
     
     //What the Collection cells will looks like
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: customCellIdentifier, for: indexPath)
+        let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: customCellIdentifier, for: indexPath) as! CustomCell
+        customCell.label.text = myFavoriteAnimes[indexPath.item]
         customCell.backgroundColor = .red
         return customCell
     }
     
     //Number Of Cells in Collection
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return myFavoriteAnimes.count
     }
     
     //Control The size of Cells
