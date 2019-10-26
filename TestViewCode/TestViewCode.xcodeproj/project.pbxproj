@@ -14,6 +14,7 @@
 		ED1CCEFD2308A63F00D34244 /* ViewControllerScreenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CCEFC2308A63F00D34244 /* ViewControllerScreenSpec.swift */; };
 		ED327F34230ACC530034236F /* ProfileGridSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED327F33230ACC530034236F /* ProfileGridSpec.swift */; };
 		ED327F36230C16A40034236F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED327F35230C16A40034236F /* Extensions.swift */; };
+		EDA0169C2364A29E0062D017 /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0169B2364A29E0062D017 /* CustomCollectionViewController.swift */; };
 		EDE49D9F23008DA2006A6EE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE49D9E23008DA2006A6EE7 /* AppDelegate.swift */; };
 		EDE49DA123008DA2006A6EE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE49DA023008DA2006A6EE7 /* ViewController.swift */; };
 		EDE49DA623008DA3006A6EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE49DA523008DA3006A6EE7 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		ED1CCEFC2308A63F00D34244 /* ViewControllerScreenSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreenSpec.swift; sourceTree = "<group>"; };
 		ED327F33230ACC530034236F /* ProfileGridSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGridSpec.swift; sourceTree = "<group>"; };
 		ED327F35230C16A40034236F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EDA0169B2364A29E0062D017 /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
 		EDE49D9B23008DA2006A6EE7 /* TestViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE49D9E23008DA2006A6EE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDE49DA023008DA2006A6EE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				EDA016982364A05B0062D017 /* GridComponents */,
 				EDE49D9E23008DA2006A6EE7 /* AppDelegate.swift */,
 				EDE49DA023008DA2006A6EE7 /* ViewController.swift */,
+				EDA0169B2364A29E0062D017 /* CustomCollectionViewController.swift */,
 				EDE49DA523008DA3006A6EE7 /* Assets.xcassets */,
 				EDE49DA723008DA3006A6EE7 /* LaunchScreen.storyboard */,
 				EDE49DAA23008DA3006A6EE7 /* Info.plist */,
@@ -374,6 +377,7 @@
 				EDE49DA123008DA2006A6EE7 /* ViewController.swift in Sources */,
 				EDE49DB12300998F006A6EE7 /* ViewControllerScreen.swift in Sources */,
 				EDE49D9F23008DA2006A6EE7 /* AppDelegate.swift in Sources */,
+				EDA0169C2364A29E0062D017 /* CustomCollectionViewController.swift in Sources */,
 				EDE49DB3230331A5006A6EE7 /* CodeView.swift in Sources */,
 				ED327F36230C16A40034236F /* Extensions.swift in Sources */,
 			);

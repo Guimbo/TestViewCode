@@ -26,12 +26,14 @@ extension UIStackView {
 }
 
 extension UILabel {
-    convenience init(backgroundColor: UIColor, text:String, textColor: UIColor){
+    convenience init(backgroundColor: UIColor?, text:String, textColor: UIColor){
         self.init()
         self.frame = .zero
-        self.backgroundColor = backgroundColor
         self.text = text
         self.textColor = textColor
+        if(backgroundColor != nil){
+            self.backgroundColor = backgroundColor
+        }
     }
     
 }
