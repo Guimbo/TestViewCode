@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let flowLayout = UICollectionViewFlowLayout()
         let controller = CustomCollectionViewController(collectionViewLayout: flowLayout)
+       // let controller = ViewController()
         
         window.rootViewController = controller
         self.window = window

@@ -13,7 +13,7 @@ final class ProfileGrid : UIView{
     
     lazy var imageProfile: UIImageView = {
         let view = UIImageView(frame: .zero)
-        view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        view.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         return view
     }()
     
