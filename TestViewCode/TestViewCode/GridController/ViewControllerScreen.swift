@@ -64,15 +64,10 @@ extension ViewControllerScreen: CodeView{
             make.height.equalTo(120)
             make.top.equalTo(self).offset(15)
             
-            
         }
-        
-        
     }
     
     func setExtraConfigs() {
         backgroundColor = .darkGray
     }
-    
-    
 }

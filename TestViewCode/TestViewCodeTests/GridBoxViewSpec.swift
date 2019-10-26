@@ -4,7 +4,7 @@
 //
 //  Created by Guilherme Araujo on 17/08/19.
 //  Copyright © 2019 Guilherme Araujo. All rights reserved.
-//
+//  
 import Quick
 import Nimble
 import Nimble_Snapshots

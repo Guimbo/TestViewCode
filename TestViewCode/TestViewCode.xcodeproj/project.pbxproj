@@ -112,6 +112,32 @@
 			path = TestViewCodeTests;
 			sourceTree = "<group>";
 		};
+		EDA016982364A05B0062D017 /* GridComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EDE953362309CD890068B69F /* ProfileGrid.swift */,
+				EDE49DBA23043678006A6EE7 /* GridBoxView.swift */,
+			);
+			path = GridComponents;
+			sourceTree = "<group>";
+		};
+		EDA016992364A0840062D017 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				ED327F35230C16A40034236F /* Extensions.swift */,
+				EDE49DB2230331A5006A6EE7 /* CodeView.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		EDA0169A2364A1260062D017 /* GridController */ = {
+			isa = PBXGroup;
+			children = (
+				EDE49DB02300998F006A6EE7 /* ViewControllerScreen.swift */,
+			);
+			path = GridController;
+			sourceTree = "<group>";
+		};
 		EDE49D9223008DA2006A6EE7 = {
 			isa = PBXGroup;
 			children = (
@@ -135,13 +161,11 @@
 		EDE49D9D23008DA2006A6EE7 /* TestViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				EDA0169A2364A1260062D017 /* GridController */,
+				EDA016992364A0840062D017 /* Reusable */,
+				EDA016982364A05B0062D017 /* GridComponents */,
 				EDE49D9E23008DA2006A6EE7 /* AppDelegate.swift */,
 				EDE49DA023008DA2006A6EE7 /* ViewController.swift */,
-				EDE49DB2230331A5006A6EE7 /* CodeView.swift */,
-				EDE49DBA23043678006A6EE7 /* GridBoxView.swift */,
-				EDE953362309CD890068B69F /* ProfileGrid.swift */,
-				EDE49DB02300998F006A6EE7 /* ViewControllerScreen.swift */,
-				ED327F35230C16A40034236F /* Extensions.swift */,
 				EDE49DA523008DA3006A6EE7 /* Assets.xcassets */,
 				EDE49DA723008DA3006A6EE7 /* LaunchScreen.storyboard */,
 				EDE49DAA23008DA3006A6EE7 /* Info.plist */,
