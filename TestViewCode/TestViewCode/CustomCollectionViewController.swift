@@ -17,7 +17,7 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
     var myFavoriteAnimes = ["Naruto", "FullMetal Alchemist", "Saint Seya", "Jojo", "Dororo", "Atack on Titan", "Bleach"]
     var myFavoriteSagas = ["Back To The Future", "Marvel Infinity Saga", "Star Wars", "Toy Story"]
     
-     var sections = ["Profile", "Animes", "Series"]
+     var sections = ["Profile", "Animes", "Movie Sagas"]
     
     override func viewDidLoad() {
         collectionView?.backgroundColor = .white
