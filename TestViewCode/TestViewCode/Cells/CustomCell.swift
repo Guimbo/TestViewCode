@@ -24,17 +24,6 @@ class CustomCell: UICollectionViewCell{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func makeClickable(){
-        self.isUserInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
-        self.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func tapGesture(){
-        print("I'm Clickable, dude!")
-    }
-    
 }
 
 extension CustomCell:CodeView{

@@ -28,6 +28,7 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
         collectionView?.register(CustomCell.self, forCellWithReuseIdentifier: cellID)
         collectionView?.register(ProfileCell.self, forCellWithReuseIdentifier: profileID)
         collectionView?.register(CustomCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
+        collectionView.delegate = self
     }
     
     //What the Collection cells will looks like
@@ -49,14 +50,14 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
             let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CustomCell
             customCell.label.text = myFavoriteAnimes[indexPath.item]
             customCell.backgroundColor = #colorLiteral(red: 0.8431372549, green: 0.2431372549, blue: 0.2941176471, alpha: 1)
-            customCell.makeClickable()
+            self.makeClickable(cell: customCell)
             return customCell
 
         } else {
             let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CustomCell
             customCell.label.text = myFavoriteSagas[indexPath.item]
             customCell.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-            customCell.makeClickable()
+            self.makeClickable(cell: customCell)
             return customCell
         }
                 
@@ -101,4 +102,30 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 40)
     }
+    
+}
+
+extension CustomCollectionViewController{
+    
+    fileprivate func makeClickable(cell: CustomCell){
+        cell.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
+        tapGesture.delegate = self as? UIGestureRecognizerDelegate
+        cell.addGestureRecognizer(tapGesture)
+    }
+
+//    @objc func tapGesture(view: SafariViewController){
+//        self.present(view, animated: true, completion: nil)
+//
+//    }
+    
+    @objc func tapGesture(_ gesture: UITapGestureRecognizer){
+        let cell = gesture.view as! CustomCell
+        let safariPage = SafariViewController()
+        safariPage.modalPresentationStyle = .formSheet
+        safariPage.label.text = cell.label.text
+        self.present(safariPage, animated: true, completion: nil)
+        
+    }
+
 }
