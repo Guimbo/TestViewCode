@@ -19,6 +19,7 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
     
      var sections = ["Profile", "Animes", "Movie Sagas"]
     
+    
     override func viewDidLoad() {
         collectionView?.backgroundColor = .white
         
@@ -26,7 +27,8 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
         
         collectionView?.register(CustomCell.self, forCellWithReuseIdentifier: cellID)
         collectionView?.register(ProfileCell.self, forCellWithReuseIdentifier: profileID)
-        collectionView?.register(CustomCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)    }
+        collectionView?.register(CustomCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
+    }
     
     //What the Collection cells will looks like
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,12 +49,14 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
             let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CustomCell
             customCell.label.text = myFavoriteAnimes[indexPath.item]
             customCell.backgroundColor = #colorLiteral(red: 0.8431372549, green: 0.2431372549, blue: 0.2941176471, alpha: 1)
+            customCell.makeClickable()
             return customCell
 
         } else {
             let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CustomCell
             customCell.label.text = myFavoriteSagas[indexPath.item]
             customCell.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+            customCell.makeClickable()
             return customCell
         }
                 

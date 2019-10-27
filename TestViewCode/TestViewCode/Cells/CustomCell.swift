@@ -12,13 +12,27 @@ class CustomCell: UICollectionViewCell{
     
     let label: UILabel = UILabel(backgroundColor: nil, text: "Deu ruim", textColor: .black)
     
+    
     override init(frame: CGRect = .zero){
         super.init(frame: frame)
         setupView()
+        //Activate  userInteraction, create gesture and add gesture.
+
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func makeClickable(){
+        self.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
+        self.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func tapGesture(){
+        print("I'm Clickable, dude!")
     }
     
 }
