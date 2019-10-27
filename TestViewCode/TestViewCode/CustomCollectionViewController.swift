@@ -28,7 +28,6 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
         collectionView?.register(CustomCell.self, forCellWithReuseIdentifier: cellID)
         collectionView?.register(ProfileCell.self, forCellWithReuseIdentifier: profileID)
         collectionView?.register(CustomCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
-        collectionView.delegate = self
     }
     
     //What the Collection cells will looks like
@@ -113,11 +112,6 @@ extension CustomCollectionViewController{
         tapGesture.delegate = self as? UIGestureRecognizerDelegate
         cell.addGestureRecognizer(tapGesture)
     }
-
-//    @objc func tapGesture(view: SafariViewController){
-//        self.present(view, animated: true, completion: nil)
-//
-//    }
     
     @objc func tapGesture(_ gesture: UITapGestureRecognizer){
         let cell = gesture.view as! CustomCell
