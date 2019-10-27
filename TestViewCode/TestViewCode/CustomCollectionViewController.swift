@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class CustomCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
@@ -14,8 +15,8 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
     let headerID = "headerID"
     let profileID = "profileID"
     
-    var myFavoriteAnimes = ["Naruto", "FullMetal Alchemist", "Saint Seya", "Jojo", "Dororo", "Atack on Titan", "Bleach"]
-    var myFavoriteSagas = ["Back To The Future", "Marvel Infinity Saga", "Star Wars", "Toy Story"]
+    var myFavoriteAnimes = ["Naruto", "FullMetalAlchemist", "SaintSeya", "Jojo", "Dororo", "AtackonTitan", "Bleach"]
+    var myFavoriteSagas = ["BackToTheFuture", "MarvelInfinitySaga", "StarWars", "ToyStory"]
     
      var sections = ["Profile", "Animes", "Movie Sagas"]
     
@@ -114,12 +115,18 @@ extension CustomCollectionViewController{
     }
     
     @objc func tapGesture(_ gesture: UITapGestureRecognizer){
+        print("I'm Clickable, dude! B| ")
         let cell = gesture.view as! CustomCell
-        let safariPage = SafariViewController()
-        safariPage.modalPresentationStyle = .formSheet
-        safariPage.label.text = cell.label.text
-        self.present(safariPage, animated: true, completion: nil)
+        showSafari(searchLink: cell.label.text ?? "Erros")
+    }
+    
+    func showSafari(searchLink:String){
+        guard let url = URL(string: "https://www.google.com/search?&q=\(searchLink)")
+            else{return}
         
+        let safariVC = SFSafariViewController(url: url)
+        safariVC.modalPresentationStyle = .formSheet
+        self.present(safariVC, animated: true)
     }
 
 }

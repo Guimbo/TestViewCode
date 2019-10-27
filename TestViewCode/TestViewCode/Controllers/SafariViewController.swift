@@ -7,31 +7,30 @@
 //
 
 import UIKit
+import SafariServices
 
 
 class SafariViewController: UIViewController{
 
-        let label:UILabel = {
-            let lbl = UILabel(frame: .zero)
-            lbl.text = "Testando isso aqui!"
-            lbl.textColor = .black
-            lbl.textAlignment = .center
-    //        lbl.backgroundColor = .blue
-            return lbl
-        }()
+    var searchTitle:String = "Erros"
+    private lazy var link = "https://www.google.com/search?&q=\(searchTitle)"
 
         override func viewDidLoad() {
             super.viewDidLoad()
             view.backgroundColor = .white
-            view.addSubview(label)
-            setupContraints()
-            // Do any additional setup after loading the view.
+            showSafari(searchLink: link)
+        }
+    
+        
+    func showSafari(searchLink:String){
+        
+        guard let url = URL(string: searchLink) else {
+            return
         }
         
-        func setupContraints() {
-            label.snp.makeConstraints{ make in
-                make.bottom.top.left.right.equalToSuperview()
-            }
-        }
+        let safariVC = SFSafariViewController(url: url)
+        safariVC.modalPresentationStyle = .formSheet
+        safariVC.present(safariVC, animated: true)
+    }
         
 }
