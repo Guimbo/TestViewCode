@@ -6,12 +6,17 @@
 //  Copyright © 2019 Guilherme Araujo. All rights reserved.
 //
 
-
-
 import UIKit
-final class ProfileGrid : UIView{
+
+public class ProfileGrid : UIView {
     
-    lazy var imageProfile: UIImageView = {
+    enum Dimen: CGFloat {
+         case titleGroupWidthToMultiplier = 0.57
+         case imageProfileWidthToMultiplier = 0.35
+         case imageProfileDistanceRightToSuperview = 10
+    }
+    
+    let imageProfile: UIImageView = {
         let view = UIImageView(frame: .zero)
         view.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         return view
@@ -39,9 +44,6 @@ final class ProfileGrid : UIView{
 extension ProfileGrid: CodeView{
     
     func buildViewsInHierarchy() {
-
-        
-        
         littleGroup.addArrangedSubviews([lblAge, lblAlignment])
         titleGroup.addArrangedSubviews([lblName, lblSubtitle, littleGroup])
     
@@ -53,18 +55,16 @@ extension ProfileGrid: CodeView{
     func setContrains() {
         imageProfile.snp.makeConstraints{make in
             make.left.top.bottom.equalToSuperview()
-            make.width.equalToSuperview().multipliedBy(0.35)
+            make.width.equalToSuperview().multipliedBy(Dimen.imageProfileWidthToMultiplier.rawValue)
             make.height.equalToSuperview()
-            make.right.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(Dimen.imageProfileDistanceRightToSuperview)
         }
         
         titleGroup.snp.makeConstraints{ make in
             make.right.top.bottom.equalToSuperview()
-            make.width.equalToSuperview().multipliedBy(0.57)
+            make.width.equalToSuperview().multipliedBy(Dimen.imageProfileDistanceRightToSuperview)
             make.height.equalToSuperview()
-            
         }
-        
     }
     
     func setExtraConfigs() {
