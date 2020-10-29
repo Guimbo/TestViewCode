@@ -9,10 +9,9 @@
 import UIKit
 import SafariServices
 
+final class SafariViewController: UIViewController{
 
-class SafariViewController: UIViewController{
-
-    var searchTitle:String = "Erros"
+    var searchTitle: String = "Erros"
     private lazy var link = "https://www.google.com/search?&q=\(searchTitle)"
 
         override func viewDidLoad() {
@@ -23,10 +22,7 @@ class SafariViewController: UIViewController{
     
         
     func showSafari(searchLink:String){
-        
-        guard let url = URL(string: searchLink) else {
-            return
-        }
+        guard let url = URL(string: searchLink) else { return }
         
         let safariVC = SFSafariViewController(url: url)
         safariVC.modalPresentationStyle = .formSheet

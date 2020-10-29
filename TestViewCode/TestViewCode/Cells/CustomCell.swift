@@ -12,13 +12,9 @@ class CustomCell: UICollectionViewCell{
     
     let label: UILabel = UILabel(backgroundColor: nil, text: "Deu ruim", textColor: .black)
     
-    
     override init(frame: CGRect = .zero){
         super.init(frame: frame)
         setupView()
-        //Activate  userInteraction, create gesture and add gesture.
-
-        
     }
     
     required init?(coder: NSCoder) {
@@ -27,8 +23,6 @@ class CustomCell: UICollectionViewCell{
 }
 
 extension CustomCell:CodeView{
-    
-    
     func buildViewsInHierarchy() {
         addSubview(label)
     }
@@ -36,7 +30,6 @@ extension CustomCell:CodeView{
     func setContrains() {
         label.snp.makeConstraints{ make in
             make.bottom.left.right.top.bottom.equalToSuperview()
-            
         }
     }
     
