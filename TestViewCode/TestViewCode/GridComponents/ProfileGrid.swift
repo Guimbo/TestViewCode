@@ -57,12 +57,12 @@ extension ProfileGrid: CodeView{
             make.left.top.bottom.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(Dimen.imageProfileWidthToMultiplier.rawValue)
             make.height.equalToSuperview()
-            make.right.equalToSuperview().offset(Dimen.imageProfileDistanceRightToSuperview)
+            make.right.equalToSuperview().offset(Dimen.imageProfileDistanceRightToSuperview.rawValue)
         }
         
         titleGroup.snp.makeConstraints{ make in
             make.right.top.bottom.equalToSuperview()
-            make.width.equalToSuperview().multipliedBy(Dimen.imageProfileDistanceRightToSuperview)
+            make.width.equalToSuperview().multipliedBy(Dimen.imageProfileDistanceRightToSuperview.rawValue)
             make.height.equalToSuperview()
         }
     }
